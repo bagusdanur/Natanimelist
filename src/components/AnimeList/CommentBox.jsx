@@ -10,7 +10,7 @@ const CommentBox = async ({ anime_mal_id }) => {
 
 
     return (
-        <div className='grid grid-cols-4 gap-4 mb-4'>
+        <div className='grid md:grid-cols-4 grid-col-1 gap-4 mb-4'>
             {comments.length === 0 ? (
                 <div className="text-color-score flex justify-center items-center p-4">Tidak ada komentar</div>
             ) : (
