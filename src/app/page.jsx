@@ -1,6 +1,8 @@
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
 import { getAnimeResponse, getNestedAnimeResponse, getUpcomingAnime, reproduce } from "../libs/api-libs";
+import HeaderSlider from "@/components/AnimeList/HeaderSlider";
+
 
 const Page = async () => {
 
@@ -11,6 +13,9 @@ const Page = async () => {
 
   return (
     <>
+    <section>
+      <HeaderSlider api={UpcomingAnime}/>
+    </section>
       {/* Anime Populer */}
       <section>
       <Header title="Populer Anime" linkHref="/populer" linkTitle="Lihat Semua"/>

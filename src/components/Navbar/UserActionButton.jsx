@@ -13,7 +13,7 @@ const UserActionButton = async() => {
                 user ? <Link className="py-2" href="/users/dashboard">Dashboard</Link> : null
             }
             
-            <Link className="bg-color-dark text-color-accent py-2 px-6  inline-block rounded" href={actionUrl} >{actionLabel}</Link>
+            <Link className="bg-color-dark text-color-navbarText py-2 px-6  inline-block rounded" href={actionUrl} >{actionLabel}</Link>
         </div>
 
     )

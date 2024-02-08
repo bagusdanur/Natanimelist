@@ -20,9 +20,6 @@ img {
 }
 
 
-img:hover {
-  scale: 102%;
-}
 
 .loading {
   width: 100px;
@@ -48,3 +45,17 @@ img:hover {
   width: 100%;
   padding-right: 10px;
 }
+
+.navbar{
+ 
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 40px;
+}
+
+
