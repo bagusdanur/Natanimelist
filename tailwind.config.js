@@ -29,6 +29,7 @@ module.exports = {
         bgAired: '#e3b5cd',
         bgEps: '#4c4c4e',
         bgMore: '#56565b'
+ 
       }
     },
   },

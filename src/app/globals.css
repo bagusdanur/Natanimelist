@@ -59,6 +59,65 @@ img {
   font-size: 40px;
 }
 
+.dropdownMenu {
+  position: absolute;
+  top: 4.5rem;
+  right: 1.5rem;
+  width: 22%;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(56, 56, 56, 0.7);
+  border: 1px solid #171717;
+  border-radius: 10px;
+}
+
+.dropdownMenu::before{
+  content: '';
+  position: absolute;
+  top: -0.7rem;
+  right: 1.1rem;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: rgba(56, 56, 56, 0.7);
+  border-left: 1px solid #171717;
+  border-top: 1px solid #171717;
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .dropdownMenu {
+    width: 80%; /* Lebar penuh */
+    top: 11.5rem; /* Sesuaikan jarak dari atas */
+    left: 15px;
+    border-radius: 0; /* Hapus border radius */
+    border: none; /* Hapus border */
+    background-color: rgba(56, 56, 56, 0.7); /* Sesuaikan opacity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
+    border-radius: 10px;
+  }
+
+  .dropdownMenu::before {
+    content: '';
+  position: absolute;
+  top: -0.7rem;
+  left: 1.8rem;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: rgba(56, 56, 56, 0.6);
+  border-left: 1px solid #171717;
+  border-top: 1px solid #171717;
+  }
+}
+
+.userImage {
+  width: 42px; 
+  height: 42px;
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+
 .swiper-pagination {
   width: auto !important;
 }
