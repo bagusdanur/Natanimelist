@@ -88,8 +88,8 @@ img {
 @media screen and (max-width: 768px) {
   .dropdownMenu {
     width: 80%; /* Lebar penuh */
-    top: 11.5rem; /* Sesuaikan jarak dari atas */
-    left: 15px;
+    top: 5rem; /* Sesuaikan jarak dari atas */
+    right: 15px;
     border-radius: 0; /* Hapus border radius */
     border: none; /* Hapus border */
     background-color: rgba(56, 56, 56, 0.7); /* Sesuaikan opacity */
@@ -101,7 +101,7 @@ img {
     content: '';
   position: absolute;
   top: -0.7rem;
-  left: 1.8rem;
+  right: 1.8rem;
   width: 20px;
   height: 20px;
   transform: rotate(45deg);

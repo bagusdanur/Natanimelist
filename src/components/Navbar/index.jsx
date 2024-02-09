@@ -7,16 +7,26 @@ const Navbar = async() => {
     const user = await authUserSession();
     return (
         <header className="bg-color-accent px-4">
-            <div className="flex md:flex-row flex-col justify-between md:items-center gap-2 p-4">
-                <Link className="font-bold text-2xl text-color-bgPrimary" href="/">NATANIMELIST</Link>
-                <div className="flex md:flex-row flex-col md-items-center gap-6">
-                <InputSearch/>
-                <DropdownMenu user={user}/>
+        <div className="flex md:flex-row flex-col justify-between md:items-center gap-2 p-4">
+            <div className="flex flex-row justify-between">
+            <Link href="/" passHref>
+                <span className="font-bold text-2xl text-color-bgPrimary">NATANIMELIST</span>
+            </Link>
+            <div className="md:hidden"> {/* Display DropdownMenu beside NATANIMELIST on mobile */}
+                    <DropdownMenu user={user} />
                 </div>
-                
             </div>
-        </header>
-    )
-}
+            
+            <div className="flex md:flex-row flex-col md-items-center gap-6">
+                
+                <InputSearch />
+                <div className="md:flex hidden"> {/* Hide DropdownMenu on mobile */}
+                    <DropdownMenu user={user} />
+                </div>
+            </div>
+        </div>
+    </header>
+    );
+};
 
-export default Navbar
+export default Navbar;
