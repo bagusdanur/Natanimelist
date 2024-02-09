@@ -19,10 +19,10 @@ const SwipperButton = () => {
 
     return (
         <div className='flex flex-col gap-2 text-color-titleColor'>
-            <button onClick={goToNextSlide} className='bg-color-navbar rounded p-1'>
+            <button onClick={goToNextSlide} className='bg-color-navbar rounded p-1 cursor-pointer hover:bg-color-accent transition-all'>
                 <CaretRight size={30} />
             </button>
-            <button onClick={goToPrevSlide} className='bg-color-navbar rounded p-1'>
+            <button onClick={goToPrevSlide} className='bg-color-navbar rounded p-1 cursor-pointer hover:bg-color-accent transition-all'>
                 <CaretLeft size={30} />
             </button>
         </div>

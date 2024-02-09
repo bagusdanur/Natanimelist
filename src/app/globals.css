@@ -59,4 +59,40 @@ img {
   font-size: 40px;
 }
 
+.swiper-pagination {
+  width: auto !important;
+}
 
+.swiper-pagination {
+	position: absolute;
+	top: 10px;
+	right: 25%;
+	width: auto !important;
+	left: auto !important;
+	margin: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important; /* Lebar bullet */
+  height: 10px !important; /* Tinggi bullet */
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffc639 !important; 
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+    position: absolute;
+    top: 10px;
+    right: 38%;
+    width: auto !important;
+    left: auto !important;
+    margin: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 7px !important; /* Lebar bullet */
+    height: 7px !important; /* Tinggi bullet */
+  }
+}

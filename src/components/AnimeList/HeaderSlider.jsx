@@ -42,6 +42,7 @@ const HeaderSlider = ({ api }) => {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar]}
                 slidesPerView={1}
+                pagination={{ clickable: true }}
             >
                 {api.data?.map((anime, index) => (
                     <SwiperSlide key={index} className='relative'>
