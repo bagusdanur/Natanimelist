@@ -2,23 +2,30 @@
 
 import { ChatCircle, Folder, Heart, UserCircle } from '@phosphor-icons/react'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const DropdownMenu = ({ user }) => { // Mengambil props sebagai objek { user }
     const [openMenu, setOpenMenu] = useState(false)
+    const menuRef = useRef()
+    const imgRef = useRef()
+    window.addEventListener('click', (e)=>{
+        if(e.target !== menuRef.current && e.target !== imgRef.current){
+            setOpenMenu(false)
+        }
+    })
     const isLoggedIn = !!user // Memeriksa apakah prop user telah diberikan
 
     return (
         <div>
             <div>
             {isLoggedIn ? (
-                        user.image ? <img onClick={() => setOpenMenu(prev => !prev)} src={user.image} className="userImage cursor-pointer" alt="User Avatar" /> : <UserCircle size={42} />
+                        user.image ? <img ref={imgRef} onClick={() => setOpenMenu(prev => !prev)} src={user.image} className="userImage cursor-pointer" alt="User Avatar" /> : <UserCircle size={42} />
                     ) : (
-                        <UserCircle className="cursor-pointer" onClick={() => setOpenMenu(prev => !prev)} size={42} />
+                        <UserCircle ref={imgRef} className="cursor-pointer" onClick={() => setOpenMenu(prev => !prev)} size={42} />
                     )}
             </div>
             {openMenu && (
-                <div className='dropdownMenu z-10'>
+                <div ref={menuRef} className='dropdownMenu z-10'>
                     {isLoggedIn ? (
                         <React.Fragment>
                             <h3 className='text-color-titleColor'>@{user.name}</h3> {/* Menggunakan user.name karena prop user tampaknya memiliki properti name dan email */}
