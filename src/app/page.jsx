@@ -7,6 +7,7 @@ import HeaderSlider from "@/components/AnimeList/HeaderSlider";
 const Page = async () => {
 
   const topAnime = await getAnimeResponse("top/anime", "limit=8")
+  const AnimeNow = await getAnimeResponse("seasons/now", "limit=5")
   const UpcomingAnime = await getUpcomingAnime("seasons/upcoming", "limit=8")
   let RecomAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   RecomAnime = reproduce(RecomAnime, 4)
@@ -14,7 +15,7 @@ const Page = async () => {
   return (
     <>
     <section>
-      <HeaderSlider api={UpcomingAnime}/>
+      <HeaderSlider api={AnimeNow}/>
     </section>
       {/* Anime Populer */}
       <section>
@@ -22,7 +23,7 @@ const Page = async () => {
       <AnimeList api={topAnime} />
       </section>
       <section>
-      <Header title="Upcoming Anime" linkHref="/populer" linkTitle="Lihat Semua"/>
+      <Header title="Upcoming Anime" linkHref="/seasons/upcoming" linkTitle="Lihat Semua"/>
       <AnimeList api={UpcomingAnime} />
       </section>
       <section>
@@ -34,4 +35,3 @@ const Page = async () => {
 }
 
 export default Page
-
