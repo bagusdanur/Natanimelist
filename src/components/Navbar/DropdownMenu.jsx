@@ -2,17 +2,25 @@
 
 import { ChatCircle, Folder, Heart, UserCircle } from '@phosphor-icons/react'
 import Link from 'next/link'
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useEffect } from 'react'
 
 const DropdownMenu = ({ user }) => { // Mengambil props sebagai objek { user }
     const [openMenu, setOpenMenu] = useState(false)
     const menuRef = useRef()
     const imgRef = useRef()
-    window.addEventListener('click', (e)=>{
-        if(e.target !== menuRef.current && e.target !== imgRef.current){
-            setOpenMenu(false)
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target) && event.target !== imgRef.current) {
+                setOpenMenu(false)
+            }
         }
-    })
+
+        window.addEventListener('click', handleClickOutside)
+
+        return () => {
+            window.removeEventListener('click', handleClickOutside)
+        }
+    }, [menuRef, imgRef])
     const isLoggedIn = !!user // Memeriksa apakah prop user telah diberikan
 
     return (

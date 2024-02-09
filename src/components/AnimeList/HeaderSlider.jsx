@@ -64,7 +64,7 @@ const HeaderSlider = ({ api }) => {
                                     <Link href={`/anime/${anime.mal_id}`}>
                                         <span className='flex items-center gap-1 text-2xl py-1 px-6 rounded-2xl bg-color-accent text-color-bgPrimary'> Detail <CaretCircleRight size={26} /> </span>
                                     </Link>
-                                    <Link href={`/anime/${anime.mal_id}`}>
+                                    <Link href="/seasons/now">
                                         <span className='flex items-center gap-1 text-2xl py-1 px-6 rounded-2xl bg-color-bgMore text-color-titleColor'>More <ArrowCircleRight size={26} /> </span>
                                     </Link>
                                 </div>
