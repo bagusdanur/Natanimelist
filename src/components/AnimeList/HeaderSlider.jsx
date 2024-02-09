@@ -55,7 +55,7 @@ const HeaderSlider = ({ api }) => {
                                     <span className='flex items-center'><Television size={26} /> {anime.type}</span>
                                     <span>{anime.year}</span>
                                     <div className='flex flex-row gap-2 items-center'>
-                                        <span className='bg-color-bgAired text-color-bgPrimary rounded-l px-1'>UpComing</span>
+                                        <span className='bg-color-bgAired text-color-bgPrimary rounded-l px-1'>{anime.status}</span>
                                         <span className='bg-color-bgEps text-color-titleColor rounded-r px-1'>{anime.episodes}</span>
                                     </div>
                                 </div>
