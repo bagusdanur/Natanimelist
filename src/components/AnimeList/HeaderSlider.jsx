@@ -48,7 +48,7 @@ const HeaderSlider = ({ api }) => {
                     <SwiperSlide key={index} className='relative'>
                         <div className='relative md:flex md:flex-row md:static'>
                             <img src={anime.images.webp.image_url} alt={anime.title} className="object-cover rounded w-full h-full md:w-1/2 md:h-96" />
-                            <div className='md:p-10 navbar md:left-5 md:static absolute inset-0 flex flex-col justify-end md:justify-center px-4 md:w-1/2'>
+                            <div className='md:p-10 navbar md:left-5 md:static absolute inset-0 flex flex-col justify-end md:justify-center px-4 md:w-1/2 rounded'>
                                 <h2 className="text-xl font-bold text-color-accent"># Spotlight</h2>
                                 <span className="md:text-4xl text-2xl font-bold text-color-titleColor">{anime.title}</span>
                                 <div className='flex flex-row gap-4 text-color-titleColor items-center py-3'>
