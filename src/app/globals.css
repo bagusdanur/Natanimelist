@@ -38,19 +38,15 @@ img {
   }
 }
 
+.navbar{
+  background-color: rgba(56, 56, 56, 0.2);
+}
 
 .modal-buttons {
   display: flex;
   justify-content: center;
   width: 100%;
   padding-right: 10px;
-}
-
-.navbar{
- 
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-  backdrop-filter: blur(1px);
 }
 
 .title {
@@ -66,7 +62,7 @@ img {
   width: 22%;
   padding: 15px;
   border-radius: 8px;
-  background-color: rgba(56, 56, 56, 0.7);
+  background-color: rgba(56, 56, 56, 0.2);
   border: 1px solid #171717;
   border-radius: 10px;
 }
@@ -79,7 +75,7 @@ img {
   width: 20px;
   height: 20px;
   transform: rotate(45deg);
-  background-color: rgba(56, 56, 56, 0.7);
+  background-color: rgba(56, 56, 56, 0.2);
   border-left: 1px solid #171717;
   border-top: 1px solid #171717;
  
@@ -92,7 +88,7 @@ img {
     right: 15px;
     border-radius: 0; /* Hapus border radius */
     border: none; /* Hapus border */
-    background-color: rgba(56, 56, 56, 0.7); /* Sesuaikan opacity */
+    background-color: rgba(56, 56, 56, 0.2); /* Sesuaikan opacity */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
     border-radius: 10px;
   }
@@ -105,7 +101,7 @@ img {
   width: 20px;
   height: 20px;
   transform: rotate(45deg);
-  background-color: rgba(56, 56, 56, 0.6);
+  background-color: rgba(56, 56, 56, 0.2);
   border-left: 1px solid #171717;
   border-top: 1px solid #171717;
   }

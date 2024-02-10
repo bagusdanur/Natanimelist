@@ -6,11 +6,11 @@ import { authUserSession } from "@/libs/auth-libs"
 const Navbar = async() => {
     const user = await authUserSession();
     return (
-        <header className="bg-color-accent px-4">
+        <header className="navbar px-4 ">
         <div className="flex md:flex-row flex-col justify-between md:items-center gap-2 p-4">
             <div className="flex flex-row justify-between">
             <Link href="/" passHref>
-                <span className="font-bold text-2xl text-color-bgPrimary">NATANIMELIST</span>
+                <span className="font-bold text-2xl text-color-accent">NATANIMELIST</span>
             </Link>
             <div className="md:hidden"> {/* Display DropdownMenu beside NATANIMELIST on mobile */}
                     <DropdownMenu user={user} />

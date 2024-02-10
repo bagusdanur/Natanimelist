@@ -1,0 +1,29 @@
+.vertikalText {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.linkDiv {
+    width: auto !important;
+    height: 265px !important;
+
+}
+
+@media screen and (max-width: 768px) {
+    .linkDiv {
+        width: auto !important;
+        height: 192px !important;
+    }
+}
+
+.img {
+    width: 200px;
+    height: 265px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .img {
+        width: 130px;
+        height: 190px !important;
+    }
+}
