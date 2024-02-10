@@ -18,7 +18,7 @@ const Navbar = async() => {
                 <span className="font-bold text-2xl text-color-accent">NATANIMELIST</span>
             </Link>
             <div className="md:hidden"> {/* Display DropdownMenu beside NATANIMELIST on mobile */}
-                    <DropdownMenu user={user} />
+                    <DropdownMenu user={user} favorites={favorites} comment={comments} />
                 </div>
             </div>
             
