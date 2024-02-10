@@ -51,7 +51,7 @@ const PopulerSlide = ({ api }) => {
                 }}
             >
                 {api.data?.map((anime, index) => (
-                    <SwiperSlide key={index} className={styles.linkDiv}>
+                    <SwiperSlide key={index} className={`px-2 ${styles.linkDiv}`}>
                         <Link href={`/anime/${anime.mal_id}`} className={`flex flex-row md:gap-1 ${styles.linkDiv}`} >
                             <div className='flex flex-col justify-end items-center'>
                                 <h2 className={`text-color-titleColor text-sm md:text-lg ${styles.vertikalText}`}>{limitTitle(anime.title, 20)}</h2>
