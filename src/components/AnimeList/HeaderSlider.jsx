@@ -70,7 +70,7 @@ const HeaderSlider = ({ api }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`absolute ${isMobile ? 'hidden' : 'bottom-0 right-3'}`}>
+                        <div className={`absolute ${isMobile ? 'hidden' : 'bottom-2 right-3'}`}>
                             <SwipperButton />
                         </div>
                     </SwiperSlide>

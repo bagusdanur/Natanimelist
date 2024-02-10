@@ -7,7 +7,7 @@ import FavoritesDelete from "@/components/Dashboard/FavoritesDelete";
 
 
 const Page = async () => {
-    
+
     const user = await authUserSession();
     const favorites = await prisma.favorites.findMany({
         where: { user_email: user.email },
@@ -38,6 +38,9 @@ const Page = async () => {
                         </div>
                     );
                 })}
+                <p className="text-center mt-4 text-gray-500">
+                    
+                </p>
             </div>
         </section>
     );

@@ -2,9 +2,14 @@ import Link from "next/link"
 import InputSearch from "./InputSearch"
 import DropdownMenu from "./DropdownMenu"
 import { authUserSession } from "@/libs/auth-libs"
+import prisma from "@/libs/prisma"
 
 const Navbar = async() => {
     const user = await authUserSession();
+    const favorites = await prisma.favorites.findMany({
+        where: { user_email: user?.email },
+    });
+    const comments = await prisma.comment.findMany({ where: { user_email: user?.email } })
     return (
         <header className="navbar px-4 ">
         <div className="flex md:flex-row flex-col justify-between md:items-center gap-2 p-4">
@@ -21,7 +26,7 @@ const Navbar = async() => {
                 
                 <InputSearch />
                 <div className="md:flex hidden"> {/* Hide DropdownMenu on mobile */}
-                    <DropdownMenu user={user} />
+                    <DropdownMenu user={user} favorites={favorites} comment={comments}/>
                 </div>
             </div>
         </div>
