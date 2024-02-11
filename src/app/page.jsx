@@ -9,6 +9,7 @@ const Page = async () => {
 
   const topAnime = await getAnimeResponse("top/anime", "limit=10")
   const AnimeNow = await getAnimeResponse("seasons/now", "limit=5")
+  const AnimeNowMain = await getAnimeResponse("seasons/now", "limit=8")
   const UpcomingAnime = await getUpcomingAnime("seasons/upcoming", "limit=8")
   let RecomAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   RecomAnime = reproduce(RecomAnime, 4)
@@ -19,13 +20,13 @@ const Page = async () => {
       <HeaderSlider api={AnimeNow}/>
     </section>
       {/* Anime Populer */}
-      <Header title="Populer Anime" linkHref="/populer" linkTitle="Lihat Semua"/>
+      <Header title="Populer Anime" linkHref="/populer" linkTitle="View All"/>
       <section>
         <PopulerSlide api={topAnime}/>
       </section>
       <section>
-      <Header title="Upcoming Anime" linkHref="/seasons/upcoming" linkTitle="Lihat Semua"/>
-      <AnimeList api={UpcomingAnime} />
+      <Header title="Anime Now" linkHref="/seasons/now" linkTitle="View All"/>
+      <AnimeList api={AnimeNow} />
       </section>
       <section>
       <Header title="Rekomendasi Anime" />

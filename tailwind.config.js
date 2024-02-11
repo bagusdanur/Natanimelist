@@ -28,7 +28,8 @@ module.exports = {
         titleColor: '#E5E5E5',
         bgAired: '#e3b5cd',
         bgEps: '#4c4c4e',
-        bgMore: '#56565b'
+        bgMore: '#56565b',
+        genres: "#8db3cd"
  
       }
     },
