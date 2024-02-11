@@ -38,7 +38,7 @@ const HeaderSlider = ({ api }) => {
     };
 
     return (
-        <div className="w-full p-4">
+        <div className="w-full md:py-4">
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar]}
                 slidesPerView={1}

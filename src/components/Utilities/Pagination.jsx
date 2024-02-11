@@ -18,9 +18,11 @@ const Pagination = ({ page, lastPage, setPage }) => {
 
     const handleLastPage = () => {
         setPage(lastPage);
+        scrollTop()
     };
     const handleFirstPage = () => {
         setPage(1);
+        scrollTop()
     };
 
 

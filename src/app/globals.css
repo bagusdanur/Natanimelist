@@ -16,6 +16,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.main{
+  width: 70%;
+}
+
+.aside{
+  width: 27%;
+}
+
 img {
   transition: .3s ease all;
   -webkit-transition: .3s ease all;
@@ -58,6 +66,10 @@ img {
   margin: 0;
   line-height: 1.15;
   font-size: 40px;
+}
+
+.gradient-bg-title {
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .dropdownMenu {

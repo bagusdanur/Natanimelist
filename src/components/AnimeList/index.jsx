@@ -6,7 +6,7 @@ const AnimeList = ({ api }) => {
     if (title.length <= maxLength) {
       return title;
     } else {
-      return title.slice(0, maxLength) + "...";
+      return title.slice(0, maxLength) + "..";
     }
   };
 
@@ -32,14 +32,14 @@ const AnimeList = ({ api }) => {
   };
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-6 sm:grid-cols-4 gap-3 px-4 h-auto">
+    <div className="grid grid-cols-2 md:grid-cols-6 sm:grid-cols-4 gap-3 md:px-10 px-6 h-auto">
       {api.data?.map((anime, index) => {
         return (
           <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer text-color-primary hover:text-color-accent transition-all" >
             <Image src={anime.images.webp.image_url} alt="..." width={150} height={250} className="w-full md:max-h-72 max-h-60  object-cover" />
             <p className="text-xs text-color-genres pt-1">{anime.genres?.map(genre => genre.name).join(", ")}</p>
             <div className="flex flex-row items-center justify-between">
-            <h3 className="font-bold md:text-lg py-1 text-md ">{limitTitle(anime.title, 18)}</h3>
+            <h3 className="font-bold md:text-lg py-1 text-md ">{limitTitle(anime.title, 15)}</h3>
             <h3 className=" md:text-base py-1 text-md md:flex hidden">{anime.year}</h3>
             </div>
             
@@ -47,7 +47,7 @@ const AnimeList = ({ api }) => {
               <div className="flex ">
                 {convertToStars(anime.score)}
               </div>
-              <p className="text-xs  px-1 md:flex hidden">({anime.scored_by} Reviews)</p>
+              <p className="text-xs  px-1 md:flex hidden">({anime.scored_by} User)</p>
               <p className="text-xs bg-color-bgEps px-1 rounded flex">EP{anime.episodes}</p>
             </div>
 

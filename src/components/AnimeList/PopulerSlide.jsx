@@ -7,6 +7,7 @@ import styles from '@/components/Styles/PopulerSlider.module.css';
 import Link from 'next/link';
 import SwipperButton from './SwipperButton';
 
+
 const PopulerSlide = ({ api }) => {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -33,8 +34,10 @@ const PopulerSlide = ({ api }) => {
     };
 
     return (
-        <div className="w-full py-3 px-5 flex flex-row relative">
+        <div className="w-full py-3 md:px-10 flex flex-row relatve">
             <Swiper
+
+               
                 breakpoints={{
                     400: {
                         slidesPerView: 3,
@@ -48,17 +51,22 @@ const PopulerSlide = ({ api }) => {
                         slidesPerView: 6,
                         spaceBetween: 0,
                     },
+
                 }}
+                
             >
                 {api.data?.map((anime, index) => (
-                    <SwiperSlide key={index} className={`px-2 ${styles.linkDiv}`}>
+                    <SwiperSlide key={index} className={`md:px-2 px-1 ${styles.linkDiv}`}>
                         <Link href={`/anime/${anime.mal_id}`} className={`flex flex-row md:gap-1 ${styles.linkDiv}`} >
                             <div className='flex flex-col justify-end items-center'>
-                                <h2 className={`text-color-titleColor text-sm md:text-lg ${styles.vertikalText}`}>{limitTitle(anime.title, 20)}</h2>
-                                <h2 className='text-color-accent text-xl'>{index + 1}</h2>
+                                <h2 className={`hidden md:block text-color-titleColor text-sm md:text-lg ${styles.vertikalText}`}>{limitTitle(anime.title, 20)}</h2>
+                                <h2 className='hidden md:block text-color-accent text-xl'>{index + 1}</h2>
                             </div>
-
-                            <img className={styles.img} src={anime.images.webp.image_url} width={250} height={250} />
+                            <div className='relative'>
+                            <img  className={styles.img} src={anime.images.webp.image_url} width={250} height={250} />
+                            <h2 className='flex absolute left-1 top-1 md:hidden bg-color-accent rounded-full px-2 text-color-dark text-xl'>{index + 1}</h2>
+                            </div>
+                            
                         </Link>
                     </SwiperSlide>
                 ))}
