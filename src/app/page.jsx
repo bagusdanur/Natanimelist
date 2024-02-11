@@ -26,7 +26,7 @@ const Page = async () => {
       </section>
       <section>
       <Header title="Anime Now" linkHref="/seasons/now" linkTitle="View All"/>
-      <AnimeList api={AnimeNow} />
+      <AnimeList api={AnimeNowMain} />
       </section>
       <section>
       <Header title="Rekomendasi Anime" />
