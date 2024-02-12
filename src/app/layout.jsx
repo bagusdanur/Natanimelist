@@ -1,7 +1,7 @@
 
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
-
+import { ScrollUp } from "@/components/Utilities/ScrollUp";
 
 
 export const metadata = {
@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` bg-color-bgPrimary`} suppressHydrationWarning={true}>
         <Navbar/>
-        {children}</body>
+        {children}
+        <ScrollUp />
+        </body>
     </html>
   );
 }

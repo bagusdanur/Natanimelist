@@ -4,7 +4,6 @@ import { getAnimeResponse, getNestedAnimeResponse, getUpcomingAnime, reproduce }
 import HeaderSlider from "@/components/AnimeList/HeaderSlider";
 import PopulerSlide from "@/components/AnimeList/PopulerSlide";
 import RekomendasiAnime from "@/components/AnimeList/rekomendasiAnime";
-import { ScrollUp } from "@/components/Utilities/ScrollUp";
 import { MainAside } from "@/components/AnimeList/MainAside";
 
 
@@ -36,7 +35,7 @@ const Page = async () => {
         <Header title="Rekomendasi Anime" />
         <RekomendasiAnime api={RecomAnime} />
       </section>
-      <ScrollUp />
+      
     </>
   );
 }

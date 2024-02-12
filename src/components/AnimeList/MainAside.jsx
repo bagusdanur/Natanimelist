@@ -55,7 +55,7 @@ export const MainAside = ({ api, upcoming }) => {
                                         {convertToStars(anime.score)}
                                     </div>
                                     <p className="text-xs  pl-1 md:flex hidden">({anime.scored_by} User)</p>
-                                    <p className="text-xs bg-color-bgEps pl-1 rounded flex">EP{anime.episodes}</p>
+                                    <p className="text-xs bg-color-bgEps px-1 rounded flex">EP{anime.episodes}</p>
                                 </div>
 
                             </Link>
