@@ -46,7 +46,7 @@ export const MainAside = ({ api, upcoming }) => {
                                 <Image src={anime.images.webp.image_url} alt="..." width={150} height={250} className="w-full md:max-h-72 max-h-60  object-cover" />
                                 <p className="text-xs text-color-genres pt-1">{anime.genres?.map(genre => genre.name).join(", ")}</p>
                                 <div className="flex flex-row items-center justify-between">
-                                    <h3 className="font-bold md:text-lg py-1 text-md ">{limitTitle(anime.title, 15)}</h3>
+                                    <h3 className="font-bold md:text-lg py-1 text-md ">{limitTitle(anime.title, 13)}</h3>
                                     <h3 className=" md:text-base py-1 text-md md:flex hidden">{anime.year}</h3>
                                 </div>
 
@@ -65,7 +65,7 @@ export const MainAside = ({ api, upcoming }) => {
 
 
             </div>
-            <div className='md:aside  md:px-0 md:py-4 py-6 px-6'>
+            <div className='md:aside  md:pr-8 md:py-4 py-6 pr-6 pl-1'>
                 <div className='bg-color-bgEps py-1 text-color-titleColor font-bold px-4 rounded flex justify-center'>
                     <h2>UpComing Anime</h2>
                 </div>
