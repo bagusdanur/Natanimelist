@@ -5,7 +5,7 @@ import HeaderSlider from "@/components/AnimeList/HeaderSlider";
 import PopulerSlide from "@/components/AnimeList/PopulerSlide";
 import RekomendasiAnime from "@/components/AnimeList/rekomendasiAnime";
 import { MainAside } from "@/components/AnimeList/MainAside";
-import DarkMode from "@/components/Utilities/DarkMode";
+
 
 
 
