@@ -27,9 +27,9 @@ const DropdownMenu = ({ user, favorites, comment }) => { // Mengambil props seba
         <div >
             <div className='rounded-lg border p-1 flex items-center justify-center'>
             {isLoggedIn ? (
-                        user.image ? <img ref={imgRef} onClick={() => setOpenMenu(prev => !prev)} src={user.image} className="userImage cursor-pointer" alt="User Avatar" /> : <UserCircle size={35} />
+                        user.image ? <img ref={imgRef} onClick={() => setOpenMenu(prev => !prev)} src={user.image} className="userImage cursor-pointer" alt="User Avatar" /> : <UserCircle size={34} />
                     ) : (
-                        <UserCircle ref={imgRef} className="cursor-pointer" onClick={() => setOpenMenu(prev => !prev)} size={42} />
+                        <UserCircle ref={imgRef} className="cursor-pointer" onClick={() => setOpenMenu(prev => !prev)} size={34} />
                     )}
             </div>
             {openMenu && (
