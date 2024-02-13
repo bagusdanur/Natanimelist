@@ -65,7 +65,7 @@ export const MainAside = ({ api, upcoming }) => {
 
 
             </div>
-            <div className='md:aside  md:pr-8 md:py-4 py-6 pr-6 pl-1'>
+            <div className='md:aside md:pl-0 md:pr-8 md:pt-4 pt-6 pr-6 pl-6'>
                 <div className='bg-color-bgEps py-1 text-color-titleColor font-bold px-4 rounded flex justify-center'>
                     <h2>UpComing Anime</h2>
                 </div>
