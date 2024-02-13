@@ -23,7 +23,7 @@ const page = () => {
 
   return (
     <>
-      <HeaderMenu title={`ANIME SEASON NOW #${page}`}/>
+      <HeaderMenu title={`Winter 2024 Anime #${page}`}/>
       <AnimeList api={seasonsNow}/>
       <Pagination page={page} setPage={setPage} lastPage={seasonsNow.pagination?.last_visible_page}/>
     </>

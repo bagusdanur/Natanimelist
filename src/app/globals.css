@@ -24,11 +24,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .main{
-  width: 70%;
+  width: 70% !important;
 }
 
 .aside{
-  width: 27%;
+  width: 30% !important;
 }
 
 img {

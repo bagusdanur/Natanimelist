@@ -13,8 +13,8 @@ const Page = async () => {
 
   const topAnime = await getAnimeResponse("top/anime", "limit=10")
   const AnimeNow = await getAnimeResponse("seasons/now", "limit=5")
-  const AnimeNowMain = await getAnimeResponse("seasons/now", "limit=12")
-  const UpcomingAnime = await getUpcomingAnime("seasons/upcoming", "limit=9")
+  const AnimeNowMain = await getAnimeResponse("seasons/now", "limit=15")
+  const UpcomingAnime = await getUpcomingAnime("seasons/upcoming", "limit=8")
   let RecomAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   RecomAnime = reproduce(RecomAnime, 6)
   

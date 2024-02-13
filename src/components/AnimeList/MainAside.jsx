@@ -33,13 +33,13 @@ export const MainAside = ({ api, upcoming }) => {
     };
 
     return (
-        <div className='flex md:flex-row flex-col gap-2'>
+        <div className='flex md:flex-row flex-col gap-2 '>
             <div className='md:main'>
                 <div className="py-4 px-10 flex justify-between items-center">
-                    <h1 className="text-xl font-bold text-color-accent">Anime Now</h1>
+                    <h1 className="text-xl font-bold text-color-accent">Winter 2024 Anime</h1>
                     <Link href="/seasons/now" className="  md-text-xl text-md underline hover:text-indigo-500 transition-all">View All</Link>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-3 md:px-10 px-6 h-auto">
+                <div className="grid grid-cols-2 md:grid-cols-5 sm:grid-cols-3 gap-3 md:px-10 px-6 h-auto">
                     {api.data?.map((anime, index) => {
                         return (
                             <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer  hover:text-color-accent transition-all" >
@@ -54,7 +54,7 @@ export const MainAside = ({ api, upcoming }) => {
                                     <div className="flex ">
                                         {convertToStars(anime.score)}
                                     </div>
-                                    <p className="text-xs  pl-1 md:flex hidden">({anime.scored_by} User)</p>
+                                    <p className="text-xs  pl-1 hidden">({anime.scored_by} User)</p>
                                     <p className="text-xs bg-color-bgEps text-color-white px-1 rounded flex">EP{anime.episodes}</p>
                                 </div>
 
@@ -65,7 +65,7 @@ export const MainAside = ({ api, upcoming }) => {
 
 
             </div>
-            <div className='md:aside md:pl-0 md:pr-8 md:pt-4 pt-6 pr-6 pl-6'>
+            <div className='md:aside md:pl-0 md:pr-10 md:pt-4 pt-6 pr-6 pl-6 '>
                 <div className='bg-color-bgEps py-1 text-color-titleColor font-bold px-4 rounded flex justify-center'>
                     <h2>UpComing Anime</h2>
                 </div>
@@ -78,13 +78,13 @@ export const MainAside = ({ api, upcoming }) => {
                                         <Image className='h-24 object-cover rounded' src={upcoming.images.webp.image_url} width={150} height={250} />
                                     </div>
                                     <div>
-                                        <h3 className='hover:text-color-accent'>{upcoming.title}</h3>
+                                        <h3 className='hover:text-color-accent'>{limitTitle(upcoming.title, 28)}</h3>
                                         <p className="text-xs text-color-genres pt-1">{upcoming.genres?.map(genre => genre.name).join(", ")}</p>
                                         <div className='flex flex-row'>
-                                        <p className="text-xs bg-color-bgEps pl-1 rounded flex ">Type {upcoming.type},</p>
-                                        <p className="text-xs text-color-accent  pl-1 ">Studio : {upcoming.studios?.map(studios => studios.name).join(", ")}</p>
+                                            <p className="text-xs bg-color-bgEps pl-1 rounded flex ">Type {upcoming.type},</p>
+                                            <p className="text-xs text-color-accent  pl-1 ">Studio : {upcoming.studios?.map(studios => studios.name).join(", ")}</p>
                                         </div>
-                                        
+
                                     </div>
                                 </Link>
                             )
