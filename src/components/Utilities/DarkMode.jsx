@@ -25,7 +25,7 @@ const DarkMode = () => {
 
   return (
     <div>
-      <button className={`flex items-center justify-center p-1 rounded-lg border ${darkMode ? 'bg-color-darkPrimary' : 'bg-color-white'}`} onClick={toggleDarkMode}>
+      <button className={`flex items-center justify-center p-1 rounded-lg border ${darkMode ? '' : 'bg-color-white'}`} onClick={toggleDarkMode}>
         {darkMode ? <Sun size={34} /> : <Moon size={34} />}
       </button>
     </div>
