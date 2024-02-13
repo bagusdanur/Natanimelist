@@ -53,9 +53,9 @@ const CommentDelete = ({ id }) => {
                                 }
                               }}
                         >
-                            <h2 style={{ textAlign: 'center' }}>Yakin Ingin Menghapus comment ini?</h2>
+                            <h2 style={{ textAlign: 'center' }} className="text-color-darkPrimary">Yakin Ingin Menghapus comment ini?</h2>
                             <div className="modal-buttons" >
-                                <button onClick={() => setIsModalOpen(false)} className="px-4">No</button>
+                                <button  onClick={() => setIsModalOpen(false)} className="px-4 text-color-darkPrimary">No</button>
                                 <button onClick={handleDelete} className='text-color-danger px-4' >Yes</button>
                             </div>
 

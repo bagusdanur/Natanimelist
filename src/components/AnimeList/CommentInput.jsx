@@ -46,7 +46,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
             <textarea 
                 onChange={handleInput} 
                 value={comment}
-                className="w-full h-32 text-xl p-4" />
+                className="w-full h-32 text-xl p-4 text-color-darkPrimary" />
             <button onClick={handlePosting} className="w-52 py-2 px-3 bg-color-accent">Posting Komentar</button>
         </div>
     );
