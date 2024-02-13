@@ -12,14 +12,14 @@ const CommentBox = async ({ anime_mal_id }) => {
     return (
         <div className='grid md:grid-cols-4 grid-col-1 gap-4 mb-4'>
             {comments.length === 0 ? (
-                <div className="text-color-score flex justify-center items-center p-4">Tidak ada komentar</div>
+                <div className=" flex justify-center items-center p-4">Tidak ada komentar</div>
             ) : (
                 comments.map(comment => {
-                    const textColor = user?.name === comment.username ? 'text-color-comment' : 'text-color-secondary';
+                    const textColor = user?.name === comment.username ? 'text-color-comment' : 'text-color-score';
                     return (
-                        <div key={comment.id} className="bg-color-primary p-3 rounded relative">
+                        <div key={comment.id} className="border p-3 rounded relative">
                             <p className={`${textColor}`}>@{comment.username}</p>
-                            <p>{comment.comment}</p>
+                            <p className=''>{comment.comment}</p>
                             { user?.name === comment.username ? <CommentDelete id={comment.id} /> : ""} 
                         </div>
                         

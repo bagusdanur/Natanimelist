@@ -5,6 +5,7 @@ import HeaderSlider from "@/components/AnimeList/HeaderSlider";
 import PopulerSlide from "@/components/AnimeList/PopulerSlide";
 import RekomendasiAnime from "@/components/AnimeList/rekomendasiAnime";
 import { MainAside } from "@/components/AnimeList/MainAside";
+import DarkMode from "@/components/Utilities/DarkMode";
 
 
 
@@ -16,7 +17,7 @@ const Page = async () => {
   const UpcomingAnime = await getUpcomingAnime("seasons/upcoming", "limit=9")
   let RecomAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   RecomAnime = reproduce(RecomAnime, 6)
-
+  
   return (
     <>
       <section>
@@ -29,7 +30,7 @@ const Page = async () => {
         <PopulerSlide api={topAnime} />
       </section>
       <section>
-        <MainAside api={AnimeNowMain} upcoming={UpcomingAnime}/>
+        <MainAside api={AnimeNowMain} upcoming={UpcomingAnime} />
       </section>
       <section>
         <Header title="Rekomendasi Anime" />

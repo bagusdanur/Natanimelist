@@ -12,10 +12,17 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+
+.dark {
+  --bg-color: #171717;
+  --text-color: #E5E5E5 !important;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
 .main{
   width: 70%;
 }
@@ -125,8 +132,8 @@ img {
 }
 
 .userImage {
-  width: 42px; 
-  height: 42px;
+  width: 35px; 
+  height: 35px;
   border-radius: 50%; 
   object-fit: cover; 
 }
@@ -166,5 +173,9 @@ img {
   .swiper-pagination-bullet {
     width: 7px !important; /* Lebar bullet */
     height: 7px !important; /* Tinggi bullet */
+  }
+
+  .warnaTeks {
+    color: #E5E5E5;
   }
 }

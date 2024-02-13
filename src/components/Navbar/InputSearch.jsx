@@ -24,8 +24,8 @@ const InputSearch = () => {
 
     return (
         <div className="relative">
-            <input placeholder="Cari Anime..." className="p-2 rounded w-full" ref={searchRef} onKeyDown={handleKeyDown} />
-            <button className="absolute top-2 end-2"><MagnifyingGlass size={24} onClick={handleSearch} /></button>
+            <input placeholder="Cari Anime..." className="p-2 rounded w-full border border-color-bgPrimary" ref={searchRef} onKeyDown={handleKeyDown} />
+            <button className="absolute top-2 end-2 text-color-bgPrimary"><MagnifyingGlass size={24} onClick={handleSearch} /></button>
         </div>
     )
 }

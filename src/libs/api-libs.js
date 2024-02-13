@@ -4,15 +4,15 @@ export const getAnimeResponse = async(resource, query) => {
     return anime
 }
 
-export const getNestedAnimeResponse = async(resource, objectProperty) => {
-    const response = await getAnimeResponse(resource)
-    return response.data?.flatMap(item => item[objectProperty])
-}
-
 export const getUpcomingAnime = async(resource, query) => {
     const response = await getAnimeResponse(resource, query)
     const anime = await response
     return anime
+}
+
+export const getNestedAnimeResponse = async(resource, objectProperty) => {
+    const response = await getAnimeResponse(resource)
+    return response.data?.flatMap(item => item[objectProperty])
 }
 
 export const reproduce = (data, gap) => {

@@ -59,7 +59,7 @@ const PopulerSlide = ({ api }) => {
                     <SwiperSlide key={index} className={`md:px-2 px-1 ${styles.linkDiv}`}>
                         <Link href={`/anime/${anime.mal_id}`} className={`flex flex-row md:gap-1 ${styles.linkDiv}`} >
                             <div className='flex flex-col justify-end items-center'>
-                                <h2 className={`hidden md:block text-color-titleColor text-sm md:text-lg ${styles.vertikalText}`}>{limitTitle(anime.title, 20)}</h2>
+                                <h2 className={`hidden md:block  text-sm md:text-lg ${styles.vertikalText}`}>{limitTitle(anime.title, 20)}</h2>
                                 <h2 className='hidden md:block text-color-accent text-xl'>{index + 1}</h2>
                             </div>
                             <div className='relative'>

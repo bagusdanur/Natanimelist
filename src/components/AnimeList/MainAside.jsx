@@ -37,12 +37,12 @@ export const MainAside = ({ api, upcoming }) => {
             <div className='md:main'>
                 <div className="py-4 px-10 flex justify-between items-center">
                     <h1 className="text-xl font-bold text-color-accent">Anime Now</h1>
-                    <Link href="" className=" text-color-primary md-text-xl text-md underline hover:text-indigo-500 transition-all">View All</Link>
+                    <Link href="/seasons/now" className="  md-text-xl text-md underline hover:text-indigo-500 transition-all">View All</Link>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-3 md:px-10 px-6 h-auto">
                     {api.data?.map((anime, index) => {
                         return (
-                            <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer text-color-primary hover:text-color-accent transition-all" >
+                            <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer  hover:text-color-accent transition-all" >
                                 <Image src={anime.images.webp.image_url} alt="..." width={150} height={250} className="w-full md:max-h-72 max-h-60  object-cover" />
                                 <p className="text-xs text-color-genres pt-1">{anime.genres?.map(genre => genre.name).join(", ")}</p>
                                 <div className="flex flex-row items-center justify-between">
@@ -55,7 +55,7 @@ export const MainAside = ({ api, upcoming }) => {
                                         {convertToStars(anime.score)}
                                     </div>
                                     <p className="text-xs  pl-1 md:flex hidden">({anime.scored_by} User)</p>
-                                    <p className="text-xs bg-color-bgEps px-1 rounded flex">EP{anime.episodes}</p>
+                                    <p className="text-xs bg-color-bgEps text-color-white px-1 rounded flex">EP{anime.episodes}</p>
                                 </div>
 
                             </Link>
