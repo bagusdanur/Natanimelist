@@ -12,6 +12,8 @@ const Page = async ({ params: { id } }) => {
     // Cek apakah anime memiliki genre dengan id yang sesuai
     return anime.genres.some(genre => genre.mal_id === parseInt(id));
   });
+
+  console.log(animeResponse.data)
   
   // Lakukan pemfilteran anime berdasarkan genres
   filteredAnime = { data: filteredAnime }

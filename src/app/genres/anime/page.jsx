@@ -1,7 +1,7 @@
 import { getAnimeResponse } from '@/libs/api-libs'
 import Image from 'next/image'
 import React from 'react'
-import GenreImage from '@/image/genres.jpg'
+import GenreImage from '@/image/Genres.jpg'
 import Link from 'next/link'
 
 const page = async () => {
