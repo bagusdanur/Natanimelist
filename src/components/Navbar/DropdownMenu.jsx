@@ -36,8 +36,8 @@ const DropdownMenu = ({ user, favorites, comment }) => { // Mengambil props seba
                 <div ref={menuRef} className='dropdownMenu z-10'>
                     {isLoggedIn ? (
                         <React.Fragment>
-                            <h3 className=' flex flex-row gap-1'><User size={22} /> {user.name}</h3> {/* Menggunakan user.name karena prop user tampaknya memiliki properti name dan email */}
-                            <p className='pb-3 text-base  flex flex-row gap-1'><Envelope size={22} /> {user.email}</p>
+                            <h3 className=' flex flex-row gap-1 text-color-titleColor'><User size={22} /> {user.name}</h3> {/* Menggunakan user.name karena prop user tampaknya memiliki properti name dan email */}
+                            <p className='pb-3 text-base  flex flex-row gap-1 text-color-titleColor'><Envelope size={22} /> {user.email}</p>
                             <ul className='flex flex-col gap-3'>
                                 <li ><Link className='py-2 px-3 text-base cursor-pointer rounded-3xl text-color-titleColor bg-color-bgMore hover:bg-color-accent flex flex-row gap-1' href="/genres/anime"><ListBullets size={24} />Genres</Link></li>
                                 <li ><Link className='py-2 px-3 text-base cursor-pointer rounded-3xl text-color-titleColor bg-color-bgMore hover:bg-color-accent flex flex-row gap-1' href="/users/dashboard"><Folder size={24} />Dashboard</Link></li>
