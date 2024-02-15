@@ -25,9 +25,9 @@ const Navbar = async () => {
                 </div>
 
                 <div className="flex md:flex-row flex-col md:items-center gap-4 ">
-
+                    <Link className="text-lg md:flex hidden" href='/anime'>Anime</Link>
+                    <Link className="text-lg md:flex hidden" href='/manga'>Manga</Link>
                     <InputSearch />
-
                     <div className="md:flex hidden gap-3"> {/* Hide DropdownMenu on mobile */}
                         <DarkMode />
                         <DropdownMenu user={user} favorites={favorites} comment={comments} />

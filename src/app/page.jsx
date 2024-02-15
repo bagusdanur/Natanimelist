@@ -1,4 +1,3 @@
-import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
 import { getAnimeResponse, getNestedAnimeResponse, getUpcomingAnime, reproduce } from "../libs/api-libs";
 import HeaderSlider from "@/components/AnimeList/HeaderSlider";
@@ -17,6 +16,7 @@ const Page = async () => {
   const UpcomingAnime = await getUpcomingAnime("seasons/upcoming", "limit=8")
   let RecomAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   RecomAnime = reproduce(RecomAnime, 6)
+  
   
   return (
     <>

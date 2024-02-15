@@ -4,6 +4,12 @@ export const getAnimeResponse = async(resource, query) => {
     return anime
 }
 
+export const getMangaResponse = async(resource, query) => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/${resource}?${query}`)
+    const anime = await response.json()
+    return anime
+}
+
 export const getUpcomingAnime = async(resource, query) => {
     const response = await getAnimeResponse(resource, query)
     const anime = await response
